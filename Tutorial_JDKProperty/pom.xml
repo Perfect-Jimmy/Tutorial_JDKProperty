@@ -5,7 +5,10 @@
   <groupId>com.tutorial</groupId>
   <artifactId>Tutorial_JDKProperty</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <modules>
+    <module>../Tutorial_Test</module>
+  </modules>
+  <packaging>pom</packaging>
 
   <name>Tutorial_JDKProperty</name>
   <url>http://maven.apache.org</url>
@@ -16,4 +19,19 @@
 
   <dependencies>
   </dependencies>
+
+  <build>
+    <plugins>
+      <!--指定JDK编译版本-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>7</source>
+          <target>7</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
