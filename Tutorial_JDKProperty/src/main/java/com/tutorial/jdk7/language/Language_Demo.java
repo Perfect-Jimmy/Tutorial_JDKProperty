@@ -12,17 +12,17 @@ import java.util.Map;
  * Created by Administrator on 2015/1/16.
  *
  */
-public class Language_Test {
+public class Language_Demo {
 
     public static void main(String[] args) throws IOException {
         /*switch语句可以使用字符串*/
-        Language_Test.switchMethod("one");
+        Language_Demo.switchMethod("one");
         /*数字下面可以加下划线*/
-        Language_Test.numberMethod();
+        Language_Demo.numberMethod();
         /*泛型的简化*/
-        Language_Test.genericsMethod();
+        Language_Demo.genericsMethod();
         /*try-with-resources自动关闭资源*/
-        Language_Test.tryWithResource();
+        Language_Demo.tryWithResource();
     }
 
     private static void switchMethod(String str){

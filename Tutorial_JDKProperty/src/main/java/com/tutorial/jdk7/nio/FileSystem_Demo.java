@@ -17,14 +17,14 @@ import java.util.Map;
 /**
  * Created by Administrator on 2015/1/16.
  */
-public class FileSystem_Test {
+public class FileSystem_Demo {
     public static void main(String[] args) throws IOException {
         /*获取文件属性*/
         //FileSystem_Test.listFileProperties();
         /*读文件*/
        // FileSystem_Test.readFile();
         /*写文件*/
-         FileSystem_Test.writeFile();
+         FileSystem_Demo.writeFile();
         /*删除文件*/
         // FileSystem_Test.deleteFile();
     }
@@ -56,7 +56,7 @@ public class FileSystem_Test {
                  ByteBuffer byteBuffer  = ByteBuffer.allocate(1024);//分配缓冲区
                  CharBuffer charBuffer = CharBuffer.allocate(1024);
                  int bytesRead = channel.read(byteBuffer);//读到缓冲区
-                 while(bytesRead != -1){
+                 while(bytesRead != -1){ //-1表示读到了文件末尾
                        byteBuffer.flip();//写模式切换到读模式--------准备读
                        decoder.decode(byteBuffer, charBuffer, false);
                        charBuffer.flip();
