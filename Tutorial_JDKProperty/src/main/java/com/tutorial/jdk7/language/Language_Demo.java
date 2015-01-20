@@ -59,8 +59,10 @@ public class Language_Demo {
     /* try-with-resources 语句会确保在try语句结束时关闭所有资源。实现了java.lang.AutoCloseable或java.io.Closeable的对象都可以做为资源。*/
     private static void tryWithResource() throws IOException {
             String path = "E:\\try.txt";
-            try(BufferedReader br = new BufferedReader(new FileReader(path))){
-                System.out.println(br.readLine());
+            try(
+                    BufferedReader br = new BufferedReader(new FileReader(path))
+            ){
+                    System.out.println(br.readLine());
             }
     }
 }
